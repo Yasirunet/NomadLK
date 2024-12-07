@@ -1,0 +1,757 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.example.com/digitalnomad#DigitalNomadOntology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.example.com/digitalnomad#DigitalNomadOntology">
+    <Prefix name="" IRI="http://www.example.com/digitalnomad#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class abbreviatedIRI=":Budget"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Bus"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":City"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Climate"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ClimatePreference"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ContinentalClimate"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":CostOfLiving"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Country"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":CoworkingSpace"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":EmergencyService"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Flight"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":HealthAndSafety"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":HighCost"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":InternetSpeed"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":LocalLaw"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Location"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":LowCost"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MediumCost"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Preference"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TemperateClimate"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TimeZoneCompatibility"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Train"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TravelOption"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TropicalClimate"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Vaccination"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WorkHours"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WorkRequirement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":enforcesLocalLaw"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasClimate"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasCostOfLiving"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasCoworkingSpace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasEmergencyService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasTimeZoneCompatibility"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hasTravelOption"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":locatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":matchesPreference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":offersInternetSpeed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":requiresVaccination"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasCostValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasInternetSpeedValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasTimeZoneDifference"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":hasWorkHour"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":ClimatePreference_Temperate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":TimeZoneCompatibility_Barcelona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":EmergencyService_112"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Vaccination_HepatitisA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":LocalLaw_Thailand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Country_Spain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Vaccination_None"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Flight_Barcelona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":WorkHours_9to5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":HighCost_Barcelona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Country_Thailand"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":InternetSpeed_Fast"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Budget_Medium"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":TropicalClimate_Savanna"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":TimeZoneCompatibility_ChiangMai"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_Punspace"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Flight_ChiangMai"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":LocalLaw_Spain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":TemperateClimate_Mediterranean"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_NomadHub"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":InternetSpeed_Moderate"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":LowCost_ChiangMai"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":EmergencyService_191"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Budget"/>
+        <Class abbreviatedIRI=":Preference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Bus"/>
+        <Class abbreviatedIRI=":TravelOption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":City"/>
+        <Class abbreviatedIRI=":Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ClimatePreference"/>
+        <Class abbreviatedIRI=":Preference"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ContinentalClimate"/>
+        <Class abbreviatedIRI=":Climate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Country"/>
+        <Class abbreviatedIRI=":Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":CoworkingSpace"/>
+        <Class abbreviatedIRI=":Location"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":EmergencyService"/>
+        <Class abbreviatedIRI=":HealthAndSafety"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Flight"/>
+        <Class abbreviatedIRI=":TravelOption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":HighCost"/>
+        <Class abbreviatedIRI=":CostOfLiving"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":InternetSpeed"/>
+        <Class abbreviatedIRI=":WorkRequirement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":LocalLaw"/>
+        <Class abbreviatedIRI=":HealthAndSafety"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":LowCost"/>
+        <Class abbreviatedIRI=":CostOfLiving"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MediumCost"/>
+        <Class abbreviatedIRI=":CostOfLiving"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":TemperateClimate"/>
+        <Class abbreviatedIRI=":Climate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":TimeZoneCompatibility"/>
+        <Class abbreviatedIRI=":WorkRequirement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Train"/>
+        <Class abbreviatedIRI=":TravelOption"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":TropicalClimate"/>
+        <Class abbreviatedIRI=":Climate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Vaccination"/>
+        <Class abbreviatedIRI=":HealthAndSafety"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":WorkHours"/>
+        <Class abbreviatedIRI=":Preference"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Budget"/>
+        <NamedIndividual abbreviatedIRI=":Budget_Medium"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":City"/>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":City"/>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ClimatePreference"/>
+        <NamedIndividual abbreviatedIRI=":ClimatePreference_Temperate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Country"/>
+        <NamedIndividual abbreviatedIRI=":Country_Spain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Country"/>
+        <NamedIndividual abbreviatedIRI=":Country_Thailand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":CoworkingSpace"/>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_NomadHub"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":CoworkingSpace"/>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_Punspace"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":EmergencyService"/>
+        <NamedIndividual abbreviatedIRI=":EmergencyService_112"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":EmergencyService"/>
+        <NamedIndividual abbreviatedIRI=":EmergencyService_191"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Flight"/>
+        <NamedIndividual abbreviatedIRI=":Flight_Barcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Flight"/>
+        <NamedIndividual abbreviatedIRI=":Flight_ChiangMai"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":HighCost"/>
+        <NamedIndividual abbreviatedIRI=":HighCost_Barcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":InternetSpeed"/>
+        <NamedIndividual abbreviatedIRI=":InternetSpeed_Fast"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":InternetSpeed"/>
+        <NamedIndividual abbreviatedIRI=":InternetSpeed_Moderate"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":LocalLaw"/>
+        <NamedIndividual abbreviatedIRI=":LocalLaw_Spain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":LocalLaw"/>
+        <NamedIndividual abbreviatedIRI=":LocalLaw_Thailand"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":LowCost"/>
+        <NamedIndividual abbreviatedIRI=":LowCost_ChiangMai"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":TemperateClimate"/>
+        <NamedIndividual abbreviatedIRI=":TemperateClimate_Mediterranean"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":TimeZoneCompatibility"/>
+        <NamedIndividual abbreviatedIRI=":TimeZoneCompatibility_Barcelona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":TimeZoneCompatibility"/>
+        <NamedIndividual abbreviatedIRI=":TimeZoneCompatibility_ChiangMai"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":TropicalClimate"/>
+        <NamedIndividual abbreviatedIRI=":TropicalClimate_Savanna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Vaccination"/>
+        <NamedIndividual abbreviatedIRI=":Vaccination_HepatitisA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Vaccination"/>
+        <NamedIndividual abbreviatedIRI=":Vaccination_None"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":WorkHours"/>
+        <NamedIndividual abbreviatedIRI=":WorkHours_9to5"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasClimate"/>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+        <NamedIndividual abbreviatedIRI=":TemperateClimate_Mediterranean"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasCostOfLiving"/>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+        <NamedIndividual abbreviatedIRI=":HighCost_Barcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasCoworkingSpace"/>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_NomadHub"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasEmergencyService"/>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+        <NamedIndividual abbreviatedIRI=":EmergencyService_112"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasTimeZoneCompatibility"/>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+        <NamedIndividual abbreviatedIRI=":TimeZoneCompatibility_Barcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasTravelOption"/>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+        <NamedIndividual abbreviatedIRI=":Flight_Barcelona"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":locatedIn"/>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+        <NamedIndividual abbreviatedIRI=":Country_Spain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasClimate"/>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+        <NamedIndividual abbreviatedIRI=":TropicalClimate_Savanna"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasCostOfLiving"/>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+        <NamedIndividual abbreviatedIRI=":LowCost_ChiangMai"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasCoworkingSpace"/>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_Punspace"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasEmergencyService"/>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+        <NamedIndividual abbreviatedIRI=":EmergencyService_191"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasTimeZoneCompatibility"/>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+        <NamedIndividual abbreviatedIRI=":TimeZoneCompatibility_ChiangMai"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":hasTravelOption"/>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+        <NamedIndividual abbreviatedIRI=":Flight_ChiangMai"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":locatedIn"/>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+        <NamedIndividual abbreviatedIRI=":Country_Thailand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":enforcesLocalLaw"/>
+        <NamedIndividual abbreviatedIRI=":Country_Spain"/>
+        <NamedIndividual abbreviatedIRI=":LocalLaw_Spain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":requiresVaccination"/>
+        <NamedIndividual abbreviatedIRI=":Country_Spain"/>
+        <NamedIndividual abbreviatedIRI=":Vaccination_None"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":enforcesLocalLaw"/>
+        <NamedIndividual abbreviatedIRI=":Country_Thailand"/>
+        <NamedIndividual abbreviatedIRI=":LocalLaw_Thailand"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":requiresVaccination"/>
+        <NamedIndividual abbreviatedIRI=":Country_Thailand"/>
+        <NamedIndividual abbreviatedIRI=":Vaccination_HepatitisA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":offersInternetSpeed"/>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_NomadHub"/>
+        <NamedIndividual abbreviatedIRI=":InternetSpeed_Fast"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":offersInternetSpeed"/>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_Punspace"/>
+        <NamedIndividual abbreviatedIRI=":InternetSpeed_Moderate"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasCostValue"/>
+        <NamedIndividual abbreviatedIRI=":Budget_Medium"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":City_Barcelona"/>
+        <Literal>Barcelona</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":City_ChiangMai"/>
+        <Literal>Chiang Mai</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":ClimatePreference_Temperate"/>
+        <Literal>Prefers Temperate Climate</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":Country_Spain"/>
+        <Literal>Spain</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":Country_Thailand"/>
+        <Literal>Thailand</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_NomadHub"/>
+        <Literal>Nomad Hub Barcelona</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":CoworkingSpace_Punspace"/>
+        <Literal>Punspace Chiang Mai</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":EmergencyService_112"/>
+        <Literal>112</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":EmergencyService_191"/>
+        <Literal>191</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":Flight_Barcelona"/>
+        <Literal>Barcelona International Airport</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":Flight_ChiangMai"/>
+        <Literal>Chiang Mai International Airport</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasCostValue"/>
+        <NamedIndividual abbreviatedIRI=":HighCost_Barcelona"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">2500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasInternetSpeedValue"/>
+        <NamedIndividual abbreviatedIRI=":InternetSpeed_Fast"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">100</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasInternetSpeedValue"/>
+        <NamedIndividual abbreviatedIRI=":InternetSpeed_Moderate"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":LocalLaw_Spain"/>
+        <Literal>Schengen Visa Policy</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":LocalLaw_Thailand"/>
+        <Literal>Visa on Arrival for 30 Days</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasCostValue"/>
+        <NamedIndividual abbreviatedIRI=":LowCost_ChiangMai"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">800</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":TemperateClimate_Mediterranean"/>
+        <Literal>Mediterranean Climate</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasTimeZoneDifference"/>
+        <NamedIndividual abbreviatedIRI=":TimeZoneCompatibility_Barcelona"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasTimeZoneDifference"/>
+        <NamedIndividual abbreviatedIRI=":TimeZoneCompatibility_ChiangMai"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":TropicalClimate_Savanna"/>
+        <Literal>Tropical Savanna Climate</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":Vaccination_HepatitisA"/>
+        <Literal>Hepatitis A</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <NamedIndividual abbreviatedIRI=":Vaccination_None"/>
+        <Literal>No Vaccination Required</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":hasWorkHour"/>
+        <NamedIndividual abbreviatedIRI=":WorkHours_9to5"/>
+        <Literal>9 AM - 5 PM</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":enforcesLocalLaw"/>
+        <Class abbreviatedIRI=":Country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasClimate"/>
+        <Class abbreviatedIRI=":Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasCostOfLiving"/>
+        <Class abbreviatedIRI=":Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasCoworkingSpace"/>
+        <Class abbreviatedIRI=":City"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasEmergencyService"/>
+        <Class abbreviatedIRI=":City"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasTimeZoneCompatibility"/>
+        <Class abbreviatedIRI=":Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":hasTravelOption"/>
+        <Class abbreviatedIRI=":City"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":locatedIn"/>
+        <Class abbreviatedIRI=":City"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":matchesPreference"/>
+        <Class abbreviatedIRI=":Location"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":offersInternetSpeed"/>
+        <Class abbreviatedIRI=":CoworkingSpace"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":requiresVaccination"/>
+        <Class abbreviatedIRI=":Country"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":enforcesLocalLaw"/>
+        <Class abbreviatedIRI=":LocalLaw"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasClimate"/>
+        <Class abbreviatedIRI=":Climate"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasCostOfLiving"/>
+        <Class abbreviatedIRI=":CostOfLiving"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasCoworkingSpace"/>
+        <Class abbreviatedIRI=":CoworkingSpace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasEmergencyService"/>
+        <Class abbreviatedIRI=":EmergencyService"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasTimeZoneCompatibility"/>
+        <Class abbreviatedIRI=":TimeZoneCompatibility"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":hasTravelOption"/>
+        <Class abbreviatedIRI=":TravelOption"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":locatedIn"/>
+        <Class abbreviatedIRI=":Country"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":matchesPreference"/>
+        <Class abbreviatedIRI=":Preference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":offersInternetSpeed"/>
+        <Class abbreviatedIRI=":InternetSpeed"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":requiresVaccination"/>
+        <Class abbreviatedIRI=":Vaccination"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasCostValue"/>
+        <Class abbreviatedIRI=":CostOfLiving"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasInternetSpeedValue"/>
+        <Class abbreviatedIRI=":InternetSpeed"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasTimeZoneDifference"/>
+        <Class abbreviatedIRI=":TimeZoneCompatibility"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":hasWorkHour"/>
+        <Class abbreviatedIRI=":WorkHours"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasCostValue"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasInternetSpeedValue"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasTimeZoneDifference"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":hasWorkHour"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

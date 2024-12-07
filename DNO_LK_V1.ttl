@@ -1,0 +1,466 @@
+@prefix : <http://www.example.com/digitalnomad#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.example.com/digitalnomad#> .
+
+<http://www.example.com/digitalnomad> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.com/digitalnomad#enforcesLocalLaw
+:enforcesLocalLaw rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Country ;
+                  rdfs:range :LocalLaw .
+
+###  http://www.example.com/digitalnomad#hasClimate
+:hasClimate rdf:type owl:ObjectProperty ;
+            rdfs:domain :Location ;
+            rdfs:range :Climate .
+
+###  http://www.example.com/digitalnomad#hasCostOfLiving
+:hasCostOfLiving rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Location ;
+                 rdfs:range :CostOfLiving .
+
+###  http://www.example.com/digitalnomad#hasCoworkingSpace
+:hasCoworkingSpace rdf:type owl:ObjectProperty ;
+                   rdfs:domain :City ;
+                   rdfs:range :CoworkingSpace .
+
+###  http://www.example.com/digitalnomad#hasEmergencyService
+:hasEmergencyService rdf:type owl:ObjectProperty ;
+                     rdfs:domain :City ;
+                     rdfs:range :EmergencyService .
+
+###  http://www.example.com/digitalnomad#hasTimeZoneCompatibility
+:hasTimeZoneCompatibility rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Location ;
+                          rdfs:range :TimeZoneCompatibility .
+
+###  http://www.example.com/digitalnomad#hasTravelOption
+:hasTravelOption rdf:type owl:ObjectProperty ;
+                 rdfs:domain :City ;
+                 rdfs:range :TravelOption .
+
+###  http://www.example.com/digitalnomad#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ;
+           rdfs:domain :City ;
+           rdfs:range :Country .
+
+###  http://www.example.com/digitalnomad#matchesPreference
+:matchesPreference rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Location ;
+                   rdfs:range :Preference .
+
+###  http://www.example.com/digitalnomad#offersInternetSpeed
+:offersInternetSpeed rdf:type owl:ObjectProperty ;
+                     rdfs:domain :CoworkingSpace ;
+                     rdfs:range :InternetSpeed .
+
+###  http://www.example.com/digitalnomad#requiresVaccination
+:requiresVaccination rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Country ;
+                     rdfs:range :Vaccination .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.example.com/digitalnomad#hasCostValue
+:hasCostValue rdf:type owl:DatatypeProperty ;
+              rdfs:domain :CostOfLiving ;
+              rdfs:range xsd:decimal .
+
+###  http://www.example.com/digitalnomad#hasInternetSpeedValue
+:hasInternetSpeedValue rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :InternetSpeed ;
+                       rdfs:range xsd:decimal .
+
+###  http://www.example.com/digitalnomad#hasName
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:domain owl:Thing ;
+         rdfs:range xsd:string .
+
+###  http://www.example.com/digitalnomad#hasTimeZoneDifference
+:hasTimeZoneDifference rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :TimeZoneCompatibility ;
+                       rdfs:range xsd:integer .
+
+###  http://www.example.com/digitalnomad#hasWorkHour
+:hasWorkHour rdf:type owl:DatatypeProperty ;
+             rdfs:domain :WorkHours ;
+             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.example.com/digitalnomad#Budget
+:Budget rdf:type owl:Class ;
+        rdfs:subClassOf :Preference .
+
+###  http://www.example.com/digitalnomad#Bus
+:Bus rdf:type owl:Class ;
+     rdfs:subClassOf :TravelOption .
+
+###  http://www.example.com/digitalnomad#CapitalCity
+:CapitalCity rdf:type owl:Class ;
+             rdfs:subClassOf :City .
+
+###  http://www.example.com/digitalnomad#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Location .
+
+###  http://www.example.com/digitalnomad#Climate
+:Climate rdf:type owl:Class .
+
+###  http://www.example.com/digitalnomad#ClimatePreference
+:ClimatePreference rdf:type owl:Class ;
+                   rdfs:subClassOf :Preference .
+
+###  http://www.example.com/digitalnomad#ContinentalClimate
+:ContinentalClimate rdf:type owl:Class ;
+                    rdfs:subClassOf :Climate .
+
+###  http://www.example.com/digitalnomad#CostOfLiving
+:CostOfLiving rdf:type owl:Class .
+
+###  http://www.example.com/digitalnomad#Country
+:Country rdf:type owl:Class ;
+         rdfs:subClassOf :Location .
+
+###  http://www.example.com/digitalnomad#CoworkingSpace
+:CoworkingSpace rdf:type owl:Class ;
+                rdfs:subClassOf :Location .
+
+###  http://www.example.com/digitalnomad#DomesticFlight
+:DomesticFlight rdf:type owl:Class ;
+                rdfs:subClassOf :Flight .
+
+###  http://www.example.com/digitalnomad#EmergencyService
+:EmergencyService rdf:type owl:Class ;
+                  rdfs:subClassOf :HealthAndSafety .
+
+###  http://www.example.com/digitalnomad#Flight
+:Flight rdf:type owl:Class ;
+        rdfs:subClassOf :TravelOption .
+
+###  http://www.example.com/digitalnomad#FullOverlap
+:FullOverlap rdf:type owl:Class ;
+             rdfs:subClassOf :TimeZoneCompatibility .
+
+###  http://www.example.com/digitalnomad#HealthAndSafety
+:HealthAndSafety rdf:type owl:Class .
+
+###  http://www.example.com/digitalnomad#HighCost
+:HighCost rdf:type owl:Class ;
+          rdfs:subClassOf :CostOfLiving .
+
+###  http://www.example.com/digitalnomad#IntercityBus
+:IntercityBus rdf:type owl:Class ;
+              rdfs:subClassOf :Bus .
+
+###  http://www.example.com/digitalnomad#InternationalFlight
+:InternationalFlight rdf:type owl:Class ;
+                     rdfs:subClassOf :Flight .
+
+###  http://www.example.com/digitalnomad#InternetSpeed
+:InternetSpeed rdf:type owl:Class ;
+               rdfs:subClassOf :WorkRequirement .
+
+###  http://www.example.com/digitalnomad#IslandCountry
+:IslandCountry rdf:type owl:Class ;
+               rdfs:subClassOf :Country .
+
+###  http://www.example.com/digitalnomad#LandlockedCountry
+:LandlockedCountry rdf:type owl:Class ;
+                   rdfs:subClassOf :Country .
+
+###  http://www.example.com/digitalnomad#LocalLaw
+:LocalLaw rdf:type owl:Class ;
+          rdfs:subClassOf :HealthAndSafety .
+
+###  http://www.example.com/digitalnomad#Location
+:Location rdf:type owl:Class .
+
+###  http://www.example.com/digitalnomad#LowCost
+:LowCost rdf:type owl:Class ;
+         rdfs:subClassOf :CostOfLiving .
+
+###  http://www.example.com/digitalnomad#LuxuryBus
+:LuxuryBus rdf:type owl:Class ;
+           rdfs:subClassOf :Bus .
+
+###  http://www.example.com/digitalnomad#MediterraneanClimate
+:MediterraneanClimate rdf:type owl:Class ;
+                      rdfs:subClassOf :TemperateClimate .
+
+###  http://www.example.com/digitalnomad#MediumCost
+:MediumCost rdf:type owl:Class ;
+            rdfs:subClassOf :CostOfLiving .
+
+###  http://www.example.com/digitalnomad#ModerateInternet
+:ModerateInternet rdf:type owl:Class ;
+                  rdfs:subClassOf :InternetSpeed .
+
+###  http://www.example.com/digitalnomad#OceanicClimate
+:OceanicClimate rdf:type owl:Class ;
+                rdfs:subClassOf :TemperateClimate .
+
+###  http://www.example.com/digitalnomad#Preference
+:Preference rdf:type owl:Class .
+
+###  http://www.example.com/digitalnomad#RainforestClimate
+:RainforestClimate rdf:type owl:Class ;
+                   rdfs:subClassOf :TropicalClimate .
+
+###  http://www.example.com/digitalnomad#RuralCity
+:RuralCity rdf:type owl:Class ;
+           rdfs:subClassOf :City .
+
+###  http://www.example.com/digitalnomad#SavannaClimate
+:SavannaClimate rdf:type owl:Class ;
+                rdfs:subClassOf :TropicalClimate .
+
+###  http://www.example.com/digitalnomad#SlowInternet
+:SlowInternet rdf:type owl:Class ;
+              rdfs:subClassOf :InternetSpeed .
+
+###  http://www.example.com/digitalnomad#SubarcticClimate
+:SubarcticClimate rdf:type owl:Class ;
+                  rdfs:subClassOf :ContinentalClimate .
+
+###  http://www.example.com/digitalnomad#TechHubCity
+:TechHubCity rdf:type owl:Class ;
+             rdfs:subClassOf :City .
+
+###  http://www.example.com/digitalnomad#TemperateClimate
+:TemperateClimate rdf:type owl:Class ;
+                  rdfs:subClassOf :Climate .
+
+###  http://www.example.com/digitalnomad#TimeZoneCompatibility
+:TimeZoneCompatibility rdf:type owl:Class ;
+                       rdfs:subClassOf :WorkRequirement .
+
+###  http://www.example.com/digitalnomad#TouristCity
+:TouristCity rdf:type owl:Class ;
+             rdfs:subClassOf :City .
+
+###  http://www.example.com/digitalnomad#Train
+:Train rdf:type owl:Class ;
+       rdfs:subClassOf :TravelOption .
+
+###  http://www.example.com/digitalnomad#TravelOption
+:TravelOption rdf:type owl:Class .
+
+###  http://www.example.com/digitalnomad#TropicalClimate
+:TropicalClimate rdf:type owl:Class ;
+                 rdfs:subClassOf :Climate .
+
+###  http://www.example.com/digitalnomad#UltraFastInternet
+:UltraFastInternet rdf:type owl:Class ;
+                   rdfs:subClassOf :InternetSpeed .
+
+###  http://www.example.com/digitalnomad#Vaccination
+:Vaccination rdf:type owl:Class ;
+             rdfs:subClassOf :HealthAndSafety .
+
+###  http://www.example.com/digitalnomad#VeryLowCost
+:VeryLowCost rdf:type owl:Class ;
+             rdfs:subClassOf :CostOfLiving .
+
+###  http://www.example.com/digitalnomad#WarmSummerContinental
+:WarmSummerContinental rdf:type owl:Class ;
+                       rdfs:subClassOf :ContinentalClimate .
+
+###  http://www.example.com/digitalnomad#WorkHours
+:WorkHours rdf:type owl:Class ;
+           rdfs:subClassOf :Preference .
+
+###  http://www.example.com/digitalnomad#WorkRequirement
+:WorkRequirement rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals (Focused on Sri Lanka)
+#################################################################
+
+### Defining Sri Lanka as the main country
+:Country_SriLanka rdf:type owl:NamedIndividual ,
+                           :IslandCountry ;
+                  :enforcesLocalLaw :LocalLaw_SriLanka ;
+                  :requiresVaccination :Vaccination_Recommended_HepA_Typhoid ;
+                  :hasName "Sri Lanka" .
+
+### Local laws and vaccinations in Sri Lanka
+:LocalLaw_SriLanka rdf:type owl:NamedIndividual ,
+                            :LocalLaw ;
+                   :hasName "Electronic Travel Authorization (ETA) for Tourists" .
+
+:Vaccination_Recommended_HepA_Typhoid rdf:type owl:NamedIndividual ,
+                                              :Vaccination ;
+                                     :hasName "Hepatitis A and Typhoid Recommended" .
+
+### Climate in Sri Lanka (Tropical)
+:TropicalClimate_Monsoon rdf:type owl:NamedIndividual ,
+                                  :TropicalClimate ;
+                         :hasName "Tropical Monsoon Climate" .
+
+### Time Zone Compatibility for Sri Lanka (UTC+5:30)
+:TimeZoneCompatibility_SriLanka rdf:type owl:NamedIndividual ,
+                                        :TimeZoneCompatibility ;
+                               :hasTimeZoneDifference 5 .
+
+### Preferences
+:ClimatePreference_Tropical rdf:type owl:NamedIndividual ,
+                                    :ClimatePreference ;
+                           :hasName "Prefers Tropical Climate" .
+
+:Budget_Medium rdf:type owl:NamedIndividual ,
+                        :Budget ;
+               :hasCostValue 1500 .
+
+:WorkHours_9to5 rdf:type owl:NamedIndividual ,
+                         :WorkHours ;
+                :hasWorkHour "9 AM - 5 PM" .
+
+### Internet Speeds
+:InternetSpeed_Fast rdf:type owl:NamedIndividual ,
+                            :InternetSpeed ;
+                   :hasInternetSpeedValue 50 .
+
+:InternetSpeed_Moderate rdf:type owl:NamedIndividual ,
+                                :InternetSpeed ;
+                       :hasInternetSpeedValue 20 .
+
+:InternetSpeed_Slow rdf:type owl:NamedIndividual ,
+                            :SlowInternet ;
+                   :hasInternetSpeedValue 5 .
+
+
+### Emergency Services in Sri Lankan Cities
+:EmergencyService_119 rdf:type owl:NamedIndividual ,
+                              :EmergencyService ;
+                     :hasName "119 Police Emergency" .
+
+### Cost of Living Instances for Sri Lankan Cities
+:MediumCost_Colombo rdf:type owl:NamedIndividual ,
+                            :MediumCost ;
+                   :hasCostValue 1500 .
+
+:LowCost_Kandy rdf:type owl:NamedIndividual ,
+                       :LowCost ;
+              :hasCostValue 1000 .
+
+:LowCost_Galle rdf:type owl:NamedIndividual ,
+                       :LowCost ;
+              :hasCostValue 1200 .
+
+:VeryLowCost_Jaffna rdf:type owl:NamedIndividual ,
+                            :VeryLowCost ;
+                   :hasCostValue 900 .
+
+
+### Coworking Spaces in Sri Lanka
+:CoworkingSpace_Hatch rdf:type owl:NamedIndividual ,
+                             :CoworkingSpace ;
+                    :offersInternetSpeed :InternetSpeed_Fast ;
+                    :hasName "Hatch Colombo" .
+
+:CoworkingSpace_ColomboCoop rdf:type owl:NamedIndividual ,
+                                    :CoworkingSpace ;
+                           :offersInternetSpeed :InternetSpeed_Moderate ;
+                           :hasName "Colombo Cooperative" .
+
+### Travel Options within Sri Lanka
+:Train_Colombo rdf:type owl:NamedIndividual ,
+                        :Train ;
+               :hasName "Colombo Fort Railway Station" .
+
+:IntercityBus_Colombo rdf:type owl:NamedIndividual ,
+                              :IntercityBus ;
+                     :hasName "Private Intercity AC Bus Colombo-Kandy" .
+
+:DomesticFlight_SriLanka rdf:type owl:NamedIndividual ,
+                                 :DomesticFlight ;
+                        :hasName "Domestic Flight: Colombo to Jaffna" .
+
+
+### Cities in Sri Lanka
+# Colombo - Capital and Tech Hub
+:City_Colombo rdf:type owl:NamedIndividual ,
+                       :CapitalCity ,
+                       :TechHubCity ;
+              :hasClimate :TropicalClimate_Monsoon ;
+              :hasCostOfLiving :MediumCost_Colombo ;
+              :hasCoworkingSpace :CoworkingSpace_Hatch ,
+                                :CoworkingSpace_ColomboCoop ;
+              :hasEmergencyService :EmergencyService_119 ;
+              :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
+              :hasTravelOption :Train_Colombo , :IntercityBus_Colombo , :DomesticFlight_SriLanka ;
+              :locatedIn :Country_SriLanka ;
+              :hasName "Colombo" .
+
+# Kandy - Tourist city
+:City_Kandy rdf:type owl:NamedIndividual ,
+                     :TouristCity ;
+            :hasClimate :TropicalClimate_Monsoon ;
+            :hasCostOfLiving :LowCost_Kandy ;
+            :hasEmergencyService :EmergencyService_119 ;
+            :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
+            :hasTravelOption :Train_Colombo , :IntercityBus_Colombo ;
+            :locatedIn :Country_SriLanka ;
+            :hasName "Kandy" .
+
+# Galle - Tourist city
+:City_Galle rdf:type owl:NamedIndividual ,
+                     :TouristCity ;
+            :hasClimate :TropicalClimate_Monsoon ;
+            :hasCostOfLiving :LowCost_Galle ;
+            :hasEmergencyService :EmergencyService_119 ;
+            :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
+            :hasTravelOption :Train_Colombo , :IntercityBus_Colombo ;
+            :locatedIn :Country_SriLanka ;
+            :hasName "Galle" .
+
+# Jaffna - Rural city
+:City_Jaffna rdf:type owl:NamedIndividual ,
+                      :RuralCity ;
+             :hasClimate :TropicalClimate_Monsoon ;
+             :hasCostOfLiving :VeryLowCost_Jaffna ;
+             :hasEmergencyService :EmergencyService_119 ;
+             :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
+             :hasTravelOption :Train_Colombo , :DomesticFlight_SriLanka ;
+             :locatedIn :Country_SriLanka ;
+             :hasName "Jaffna" .
+
+
+### Additional Preferences and Requirements
+:ClimatePreference_Tropical rdf:type owl:NamedIndividual ,
+                                    :ClimatePreference ;
+                           :hasName "Prefers Tropical Climate" .
+
+### Example WorkRequirement (TimeZone)
+:TimeZoneCompatibility_SriLanka rdf:type owl:NamedIndividual ,
+                                        :TimeZoneCompatibility ;
+                               :hasTimeZoneDifference 5 .
+
+### Example Budget Preference
+:Budget_Medium rdf:type owl:NamedIndividual ,
+                        :Budget ;
+               :hasCostValue 1500 .
+
+### Example WorkHours
+:WorkHours_9to5 rdf:type owl:NamedIndividual ,
+                         :WorkHours ;
+                :hasWorkHour "9 AM - 5 PM" .
+
+
+# End of Ontology
