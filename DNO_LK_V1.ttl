@@ -17,50 +17,66 @@
                   rdfs:domain :Country ;
                   rdfs:range :LocalLaw .
 
+
+###  http://www.example.com/digitalnomad#hasAccommodation
+:hasAccommodation rdf:type owl:ObjectProperty ;
+                  rdfs:domain :City ;
+                  rdfs:range :Accommodation .
+
+
 ###  http://www.example.com/digitalnomad#hasClimate
 :hasClimate rdf:type owl:ObjectProperty ;
             rdfs:domain :Location ;
             rdfs:range :Climate .
+
 
 ###  http://www.example.com/digitalnomad#hasCostOfLiving
 :hasCostOfLiving rdf:type owl:ObjectProperty ;
                  rdfs:domain :Location ;
                  rdfs:range :CostOfLiving .
 
+
 ###  http://www.example.com/digitalnomad#hasCoworkingSpace
 :hasCoworkingSpace rdf:type owl:ObjectProperty ;
                    rdfs:domain :City ;
                    rdfs:range :CoworkingSpace .
+
 
 ###  http://www.example.com/digitalnomad#hasEmergencyService
 :hasEmergencyService rdf:type owl:ObjectProperty ;
                      rdfs:domain :City ;
                      rdfs:range :EmergencyService .
 
+
 ###  http://www.example.com/digitalnomad#hasTimeZoneCompatibility
 :hasTimeZoneCompatibility rdf:type owl:ObjectProperty ;
                           rdfs:domain :Location ;
                           rdfs:range :TimeZoneCompatibility .
+
 
 ###  http://www.example.com/digitalnomad#hasTravelOption
 :hasTravelOption rdf:type owl:ObjectProperty ;
                  rdfs:domain :City ;
                  rdfs:range :TravelOption .
 
+
 ###  http://www.example.com/digitalnomad#locatedIn
 :locatedIn rdf:type owl:ObjectProperty ;
            rdfs:domain :City ;
            rdfs:range :Country .
+
 
 ###  http://www.example.com/digitalnomad#matchesPreference
 :matchesPreference rdf:type owl:ObjectProperty ;
                    rdfs:domain :Location ;
                    rdfs:range :Preference .
 
+
 ###  http://www.example.com/digitalnomad#offersInternetSpeed
 :offersInternetSpeed rdf:type owl:ObjectProperty ;
                      rdfs:domain :CoworkingSpace ;
                      rdfs:range :InternetSpeed .
+
 
 ###  http://www.example.com/digitalnomad#requiresVaccination
 :requiresVaccination rdf:type owl:ObjectProperty ;
@@ -72,25 +88,42 @@
 #    Data properties
 #################################################################
 
+###  http://www.example.com/digitalnomad#hasCostPerNight
+:hasCostPerNight rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Accommodation ;
+                 rdfs:range xsd:decimal .
+
+
 ###  http://www.example.com/digitalnomad#hasCostValue
 :hasCostValue rdf:type owl:DatatypeProperty ;
               rdfs:domain :CostOfLiving ;
               rdfs:range xsd:decimal .
+
 
 ###  http://www.example.com/digitalnomad#hasInternetSpeedValue
 :hasInternetSpeedValue rdf:type owl:DatatypeProperty ;
                        rdfs:domain :InternetSpeed ;
                        rdfs:range xsd:decimal .
 
+
 ###  http://www.example.com/digitalnomad#hasName
 :hasName rdf:type owl:DatatypeProperty ;
-         rdfs:domain owl:Thing ;
+         rdfs:domain :Accommodation ,
+                     owl:Thing ;
          rdfs:range xsd:string .
+
+
+###  http://www.example.com/digitalnomad#hasRating
+:hasRating rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Accommodation ;
+           rdfs:range xsd:decimal .
+
 
 ###  http://www.example.com/digitalnomad#hasTimeZoneDifference
 :hasTimeZoneDifference rdf:type owl:DatatypeProperty ;
                        rdfs:domain :TimeZoneCompatibility ;
                        rdfs:range xsd:integer .
+
 
 ###  http://www.example.com/digitalnomad#hasWorkHour
 :hasWorkHour rdf:type owl:DatatypeProperty ;
@@ -98,369 +131,683 @@
              rdfs:range xsd:string .
 
 
+###  http://www.example.com/digitalnomad#preferredAccommodationType
+:preferredAccommodationType rdf:type owl:DatatypeProperty ;
+                            rdfs:domain :AccommodationPreference ;
+                            rdfs:range xsd:string .
+
+
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.example.com/digitalnomad#Accommodation
+:Accommodation rdf:type owl:Class ;
+               rdfs:subClassOf :Location .
+
+
+###  http://www.example.com/digitalnomad#AccommodationPreference
+:AccommodationPreference rdf:type owl:Class ;
+                         rdfs:subClassOf :Preference .
+
 
 ###  http://www.example.com/digitalnomad#Budget
 :Budget rdf:type owl:Class ;
         rdfs:subClassOf :Preference .
 
+
 ###  http://www.example.com/digitalnomad#Bus
 :Bus rdf:type owl:Class ;
      rdfs:subClassOf :TravelOption .
+
 
 ###  http://www.example.com/digitalnomad#CapitalCity
 :CapitalCity rdf:type owl:Class ;
              rdfs:subClassOf :City .
 
+
 ###  http://www.example.com/digitalnomad#City
 :City rdf:type owl:Class ;
       rdfs:subClassOf :Location .
 
+
 ###  http://www.example.com/digitalnomad#Climate
 :Climate rdf:type owl:Class .
+
 
 ###  http://www.example.com/digitalnomad#ClimatePreference
 :ClimatePreference rdf:type owl:Class ;
                    rdfs:subClassOf :Preference .
 
+
 ###  http://www.example.com/digitalnomad#ContinentalClimate
 :ContinentalClimate rdf:type owl:Class ;
                     rdfs:subClassOf :Climate .
 
+
 ###  http://www.example.com/digitalnomad#CostOfLiving
 :CostOfLiving rdf:type owl:Class .
+
 
 ###  http://www.example.com/digitalnomad#Country
 :Country rdf:type owl:Class ;
          rdfs:subClassOf :Location .
 
+
 ###  http://www.example.com/digitalnomad#CoworkingSpace
 :CoworkingSpace rdf:type owl:Class ;
                 rdfs:subClassOf :Location .
+
 
 ###  http://www.example.com/digitalnomad#DomesticFlight
 :DomesticFlight rdf:type owl:Class ;
                 rdfs:subClassOf :Flight .
 
+
 ###  http://www.example.com/digitalnomad#EmergencyService
 :EmergencyService rdf:type owl:Class ;
                   rdfs:subClassOf :HealthAndSafety .
+
 
 ###  http://www.example.com/digitalnomad#Flight
 :Flight rdf:type owl:Class ;
         rdfs:subClassOf :TravelOption .
 
+
 ###  http://www.example.com/digitalnomad#FullOverlap
 :FullOverlap rdf:type owl:Class ;
              rdfs:subClassOf :TimeZoneCompatibility .
 
+
 ###  http://www.example.com/digitalnomad#HealthAndSafety
 :HealthAndSafety rdf:type owl:Class .
+
 
 ###  http://www.example.com/digitalnomad#HighCost
 :HighCost rdf:type owl:Class ;
           rdfs:subClassOf :CostOfLiving .
 
+
+###  http://www.example.com/digitalnomad#Homestay
+:Homestay rdf:type owl:Class ;
+          rdfs:subClassOf :Accommodation .
+
+
+###  http://www.example.com/digitalnomad#Hostel
+:Hostel rdf:type owl:Class ;
+        rdfs:subClassOf :Accommodation .
+
+
+###  http://www.example.com/digitalnomad#Hotel
+:Hotel rdf:type owl:Class ;
+       rdfs:subClassOf :Accommodation .
+
+
 ###  http://www.example.com/digitalnomad#IntercityBus
 :IntercityBus rdf:type owl:Class ;
               rdfs:subClassOf :Bus .
+
 
 ###  http://www.example.com/digitalnomad#InternationalFlight
 :InternationalFlight rdf:type owl:Class ;
                      rdfs:subClassOf :Flight .
 
+
 ###  http://www.example.com/digitalnomad#InternetSpeed
 :InternetSpeed rdf:type owl:Class ;
                rdfs:subClassOf :WorkRequirement .
+
 
 ###  http://www.example.com/digitalnomad#IslandCountry
 :IslandCountry rdf:type owl:Class ;
                rdfs:subClassOf :Country .
 
+
 ###  http://www.example.com/digitalnomad#LandlockedCountry
 :LandlockedCountry rdf:type owl:Class ;
                    rdfs:subClassOf :Country .
+
 
 ###  http://www.example.com/digitalnomad#LocalLaw
 :LocalLaw rdf:type owl:Class ;
           rdfs:subClassOf :HealthAndSafety .
 
+
 ###  http://www.example.com/digitalnomad#Location
 :Location rdf:type owl:Class .
+
 
 ###  http://www.example.com/digitalnomad#LowCost
 :LowCost rdf:type owl:Class ;
          rdfs:subClassOf :CostOfLiving .
 
+
 ###  http://www.example.com/digitalnomad#LuxuryBus
 :LuxuryBus rdf:type owl:Class ;
            rdfs:subClassOf :Bus .
+
 
 ###  http://www.example.com/digitalnomad#MediterraneanClimate
 :MediterraneanClimate rdf:type owl:Class ;
                       rdfs:subClassOf :TemperateClimate .
 
+
 ###  http://www.example.com/digitalnomad#MediumCost
 :MediumCost rdf:type owl:Class ;
             rdfs:subClassOf :CostOfLiving .
+
 
 ###  http://www.example.com/digitalnomad#ModerateInternet
 :ModerateInternet rdf:type owl:Class ;
                   rdfs:subClassOf :InternetSpeed .
 
+
 ###  http://www.example.com/digitalnomad#OceanicClimate
 :OceanicClimate rdf:type owl:Class ;
                 rdfs:subClassOf :TemperateClimate .
 
+
+###  http://www.example.com/digitalnomad#PartialOverlap
+:PartialOverlap rdf:type owl:Class ;
+                rdfs:subClassOf :TimeZoneCompatibility .
+
+
 ###  http://www.example.com/digitalnomad#Preference
 :Preference rdf:type owl:Class .
+
 
 ###  http://www.example.com/digitalnomad#RainforestClimate
 :RainforestClimate rdf:type owl:Class ;
                    rdfs:subClassOf :TropicalClimate .
 
+
 ###  http://www.example.com/digitalnomad#RuralCity
 :RuralCity rdf:type owl:Class ;
            rdfs:subClassOf :City .
+
 
 ###  http://www.example.com/digitalnomad#SavannaClimate
 :SavannaClimate rdf:type owl:Class ;
                 rdfs:subClassOf :TropicalClimate .
 
+
+###  http://www.example.com/digitalnomad#ServicedApartment
+:ServicedApartment rdf:type owl:Class ;
+                   rdfs:subClassOf :Accommodation .
+
+
 ###  http://www.example.com/digitalnomad#SlowInternet
 :SlowInternet rdf:type owl:Class ;
               rdfs:subClassOf :InternetSpeed .
+
 
 ###  http://www.example.com/digitalnomad#SubarcticClimate
 :SubarcticClimate rdf:type owl:Class ;
                   rdfs:subClassOf :ContinentalClimate .
 
+
 ###  http://www.example.com/digitalnomad#TechHubCity
 :TechHubCity rdf:type owl:Class ;
              rdfs:subClassOf :City .
+
 
 ###  http://www.example.com/digitalnomad#TemperateClimate
 :TemperateClimate rdf:type owl:Class ;
                   rdfs:subClassOf :Climate .
 
+
 ###  http://www.example.com/digitalnomad#TimeZoneCompatibility
 :TimeZoneCompatibility rdf:type owl:Class ;
                        rdfs:subClassOf :WorkRequirement .
+
 
 ###  http://www.example.com/digitalnomad#TouristCity
 :TouristCity rdf:type owl:Class ;
              rdfs:subClassOf :City .
 
+
 ###  http://www.example.com/digitalnomad#Train
 :Train rdf:type owl:Class ;
        rdfs:subClassOf :TravelOption .
 
+
 ###  http://www.example.com/digitalnomad#TravelOption
 :TravelOption rdf:type owl:Class .
+
 
 ###  http://www.example.com/digitalnomad#TropicalClimate
 :TropicalClimate rdf:type owl:Class ;
                  rdfs:subClassOf :Climate .
 
+
 ###  http://www.example.com/digitalnomad#UltraFastInternet
 :UltraFastInternet rdf:type owl:Class ;
                    rdfs:subClassOf :InternetSpeed .
+
 
 ###  http://www.example.com/digitalnomad#Vaccination
 :Vaccination rdf:type owl:Class ;
              rdfs:subClassOf :HealthAndSafety .
 
+
 ###  http://www.example.com/digitalnomad#VeryLowCost
 :VeryLowCost rdf:type owl:Class ;
              rdfs:subClassOf :CostOfLiving .
+
 
 ###  http://www.example.com/digitalnomad#WarmSummerContinental
 :WarmSummerContinental rdf:type owl:Class ;
                        rdfs:subClassOf :ContinentalClimate .
 
+
 ###  http://www.example.com/digitalnomad#WorkHours
 :WorkHours rdf:type owl:Class ;
            rdfs:subClassOf :Preference .
+
 
 ###  http://www.example.com/digitalnomad#WorkRequirement
 :WorkRequirement rdf:type owl:Class .
 
 
 #################################################################
-#    Individuals (Focused on Sri Lanka)
+#    Individuals
 #################################################################
 
-### Defining Sri Lanka as the main country
+###  http://www.example.com/digitalnomad#Accommodation_98AcresResort
+:Accommodation_98AcresResort rdf:type owl:NamedIndividual ,
+                                      :Hotel ;
+                             :locatedIn :City_Ella ;
+                             :hasCostPerNight 220.00 ;
+                             :hasName "98 Acres Resort & Spa" ;
+                             :hasRating 4.9 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_AmariGalle
+:Accommodation_AmariGalle rdf:type owl:NamedIndividual ,
+                                   :Hotel ;
+                          :locatedIn :City_Galle ;
+                          :hasCostPerNight 180.00 ;
+                          :hasName "Amari Galle" ;
+                          :hasRating 4.7 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_CinnamonGrandColombo
+:Accommodation_CinnamonGrandColombo rdf:type owl:NamedIndividual ,
+                                             :Hotel ;
+                                    :locatedIn :City_Colombo ;
+                                    :hasCostPerNight 180.00 ;
+                                    :hasName "Cinnamon Grand Colombo" ;
+                                    :hasRating 4.6 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_ColomboCityHostel
+:Accommodation_ColomboCityHostel rdf:type owl:NamedIndividual ,
+                                          :Hostel ;
+                                 :locatedIn :City_Colombo ;
+                                 :hasCostPerNight 20.00 ;
+                                 :hasName "Colombo City Hostel" ;
+                                 :hasRating 4.3 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_ColomboServicedApartment
+:Accommodation_ColomboServicedApartment rdf:type owl:NamedIndividual ,
+                                                 :ServicedApartment ;
+                                        :locatedIn :City_Colombo ;
+                                        :hasCostPerNight 90.00 ;
+                                        :hasName "Colombo Residencies Serviced Apartment" ;
+                                        :hasRating 4.5 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_EarlRegency
+:Accommodation_EarlRegency rdf:type owl:NamedIndividual ,
+                                    :Hotel ;
+                           :locatedIn :City_Kandy ;
+                           :hasCostPerNight 140.00 ;
+                           :hasName "Earl's Regency Hotel" ;
+                           :hasRating 4.7 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_EllaHomestay
+:Accommodation_EllaHomestay rdf:type owl:NamedIndividual ,
+                                     :Homestay ;
+                            :locatedIn :City_Ella ;
+                            :hasCostPerNight 40.00 ;
+                            :hasName "Ella's Cozy Homestay" ;
+                            :hasRating 4.6 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_EllaJungleResort
+:Accommodation_EllaJungleResort rdf:type owl:NamedIndividual ,
+                                         :Hotel ;
+                                :locatedIn :City_Ella ;
+                                :hasCostPerNight 160.00 ;
+                                :hasName "Ella Jungle Resort" ;
+                                :hasRating 4.6 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_EllaRockHostel
+:Accommodation_EllaRockHostel rdf:type owl:NamedIndividual ,
+                                       :Hostel ;
+                              :locatedIn :City_Ella ;
+                              :hasCostPerNight 10.00 ;
+                              :hasName "Ella Rock Backpackers Hostel" ;
+                              :hasRating 4.3 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_FortBazaar
+:Accommodation_FortBazaar rdf:type owl:NamedIndividual ,
+                                   :Hotel ;
+                          :locatedIn :City_Galle ;
+                          :hasCostPerNight 200.00 ;
+                          :hasName "Fort Bazaar Hotel" ;
+                          :hasRating 4.8 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_GalleHostel
+:Accommodation_GalleHostel rdf:type owl:NamedIndividual ,
+                                    :Hostel ;
+                           :locatedIn :City_Galle ;
+                           :hasCostPerNight 18.00 ;
+                           :hasName "Galle Fort Hostel" ;
+                           :hasRating 4.4 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_JaffnaHeritageHotel
+:Accommodation_JaffnaHeritageHotel rdf:type owl:NamedIndividual ,
+                                            :Hotel ;
+                                   :locatedIn :City_Jaffna ;
+                                   :hasCostPerNight 100.00 ;
+                                   :hasName "Jaffna Heritage Hotel" ;
+                                   :hasRating 4.5 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_JaffnaHomestay
+:Accommodation_JaffnaHomestay rdf:type owl:NamedIndividual ,
+                                       :Homestay ;
+                              :locatedIn :City_Jaffna ;
+                              :hasCostPerNight 30.00 ;
+                              :hasName "Traditional Jaffna Homestay" ;
+                              :hasRating 4.4 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_JaffnaHostel
+:Accommodation_JaffnaHostel rdf:type owl:NamedIndividual ,
+                                     :Hostel ;
+                            :locatedIn :City_Jaffna ;
+                            :hasCostPerNight 12.00 ;
+                            :hasName "Jaffna Backpackers Hostel" ;
+                            :hasRating 4.2 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_KandyBackpackersHostel
+:Accommodation_KandyBackpackersHostel rdf:type owl:NamedIndividual ,
+                                               :Hostel ;
+                                      :locatedIn :City_Kandy ;
+                                      :hasCostPerNight 15.00 ;
+                                      :hasName "Kandy Backpackers Hostel" ;
+                                      :hasRating 4.2 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_KandyCottage
+:Accommodation_KandyCottage rdf:type owl:NamedIndividual ,
+                                     :Homestay ;
+                            :locatedIn :City_Kandy ;
+                            :hasCostPerNight 35.00 ;
+                            :hasName "Kandy Cottage Homestay" ;
+                            :hasRating 4.5 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_LighthouseApartment
+:Accommodation_LighthouseApartment rdf:type owl:NamedIndividual ,
+                                            :ServicedApartment ;
+                                   :locatedIn :City_Galle ;
+                                   :hasCostPerNight 70.00 ;
+                                   :hasName "Lighthouse Apartment" ;
+                                   :hasRating 4.6 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_ShangriLaColombo
+:Accommodation_ShangriLaColombo rdf:type owl:NamedIndividual ,
+                                         :Hotel ;
+                                :locatedIn :City_Colombo ;
+                                :hasCostPerNight 250.00 ;
+                                :hasName "Shangri-La Colombo" ;
+                                :hasRating 4.8 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_TheKandyHouse
+:Accommodation_TheKandyHouse rdf:type owl:NamedIndividual ,
+                                      :Hotel ;
+                             :locatedIn :City_Kandy ;
+                             :hasCostPerNight 220.00 ;
+                             :hasName "The Kandy House" ;
+                             :hasRating 4.8 .
+
+
+###  http://www.example.com/digitalnomad#Accommodation_ThinnaiJaffna
+:Accommodation_ThinnaiJaffna rdf:type owl:NamedIndividual ,
+                                      :Hotel ;
+                             :locatedIn :City_Jaffna ;
+                             :hasCostPerNight 120.00 ;
+                             :hasName "The Thinnai Hotel" ;
+                             :hasRating 4.7 .
+
+
+###  http://www.example.com/digitalnomad#Budget_High
+:Budget_High rdf:type owl:NamedIndividual ,
+                      :Budget .
+
+
+###  http://www.example.com/digitalnomad#Budget_Low
+:Budget_Low rdf:type owl:NamedIndividual ,
+                     :Budget .
+
+
+###  http://www.example.com/digitalnomad#Budget_Medium
+:Budget_Medium rdf:type owl:NamedIndividual ,
+                        :Budget ;
+               :hasCostValue 1500 .
+
+
+###  http://www.example.com/digitalnomad#City_Colombo
+:City_Colombo rdf:type owl:NamedIndividual ,
+                       :CapitalCity ,
+                       :TechHubCity ;
+              :hasAccommodation :Accommodation_CinnamonGrandColombo ,
+                                :Accommodation_ColomboCityHostel ,
+                                :Accommodation_ColomboServicedApartment ,
+                                :Accommodation_ShangriLaColombo ;
+              :hasClimate :TropicalClimate_Monsoon ;
+              :hasCostOfLiving :MediumCost_Colombo ;
+              :hasCoworkingSpace :CoworkingSpace_ColomboCoop ,
+                                 :CoworkingSpace_Hatch ;
+              :hasEmergencyService :EmergencyService_119 ;
+              :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
+              :hasTravelOption :DomesticFlight_SriLanka ,
+                               :IntercityBus_Colombo ,
+                               :Train_Colombo ;
+              :locatedIn :Country_SriLanka ;
+              :hasName "Colombo" .
+
+
+###  http://www.example.com/digitalnomad#City_Ella
+:City_Ella rdf:type owl:NamedIndividual ,
+                    :TouristCity .
+
+
+###  http://www.example.com/digitalnomad#City_Galle
+:City_Galle rdf:type owl:NamedIndividual ,
+                     :TouristCity ;
+            :hasAccommodation :Accommodation_AmariGalle ,
+                              :Accommodation_FortBazaar ,
+                              :Accommodation_GalleHostel ,
+                              :Accommodation_LighthouseApartment ;
+            :hasClimate :TropicalClimate_Monsoon ;
+            :hasCostOfLiving :LowCost_Galle ;
+            :hasEmergencyService :EmergencyService_119 ;
+            :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
+            :hasTravelOption :IntercityBus_Colombo ,
+                             :Train_Colombo ;
+            :locatedIn :Country_SriLanka ;
+            :hasName "Galle" .
+
+
+###  http://www.example.com/digitalnomad#City_Jaffna
+:City_Jaffna rdf:type owl:NamedIndividual ,
+                      :RuralCity ;
+             :hasAccommodation :Accommodation_JaffnaHeritageHotel ,
+                               :Accommodation_JaffnaHomestay ,
+                               :Accommodation_JaffnaHostel ,
+                               :Accommodation_ThinnaiJaffna ;
+             :hasClimate :TropicalClimate_Monsoon ;
+             :hasCostOfLiving :VeryLowCost_Jaffna ;
+             :hasEmergencyService :EmergencyService_119 ;
+             :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
+             :hasTravelOption :DomesticFlight_SriLanka ,
+                              :Train_Colombo ;
+             :locatedIn :Country_SriLanka ;
+             :hasName "Jaffna" .
+
+
+###  http://www.example.com/digitalnomad#City_Kandy
+:City_Kandy rdf:type owl:NamedIndividual ,
+                     :TouristCity ;
+            :hasAccommodation :Accommodation_EarlRegency ,
+                              :Accommodation_KandyBackpackersHostel ,
+                              :Accommodation_KandyCottage ,
+                              :Accommodation_TheKandyHouse ;
+            :hasClimate :TropicalClimate_Monsoon ;
+            :hasCostOfLiving :LowCost_Kandy ;
+            :hasEmergencyService :EmergencyService_119 ;
+            :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
+            :hasTravelOption :IntercityBus_Colombo ,
+                             :Train_Colombo ;
+            :locatedIn :Country_SriLanka ;
+            :hasName "Kandy" .
+
+
+###  http://www.example.com/digitalnomad#ClimatePreference_Tropical
+:ClimatePreference_Tropical rdf:type owl:NamedIndividual ,
+                                     :ClimatePreference ;
+                            :hasName "Prefers Tropical Climate" .
+
+
+###  http://www.example.com/digitalnomad#Country_SriLanka
 :Country_SriLanka rdf:type owl:NamedIndividual ,
                            :IslandCountry ;
                   :enforcesLocalLaw :LocalLaw_SriLanka ;
                   :requiresVaccination :Vaccination_Recommended_HepA_Typhoid ;
                   :hasName "Sri Lanka" .
 
-### Local laws and vaccinations in Sri Lanka
+
+###  http://www.example.com/digitalnomad#CoworkingSpace_ColomboCoop
+:CoworkingSpace_ColomboCoop rdf:type owl:NamedIndividual ,
+                                     :CoworkingSpace ;
+                            :offersInternetSpeed :InternetSpeed_Moderate ;
+                            :hasName "Colombo Cooperative" .
+
+
+###  http://www.example.com/digitalnomad#CoworkingSpace_Hatch
+:CoworkingSpace_Hatch rdf:type owl:NamedIndividual ,
+                               :CoworkingSpace ;
+                      :offersInternetSpeed :InternetSpeed_Fast ;
+                      :hasName "Hatch Colombo" .
+
+
+###  http://www.example.com/digitalnomad#DomesticFlight_SriLanka
+:DomesticFlight_SriLanka rdf:type owl:NamedIndividual ,
+                                  :DomesticFlight ;
+                         :hasName "Domestic Flight: Colombo to Jaffna" .
+
+
+###  http://www.example.com/digitalnomad#EmergencyService_119
+:EmergencyService_119 rdf:type owl:NamedIndividual ,
+                               :EmergencyService ;
+                      :hasName "119 Police Emergency" .
+
+
+###  http://www.example.com/digitalnomad#IntercityBus_Colombo
+:IntercityBus_Colombo rdf:type owl:NamedIndividual ,
+                               :IntercityBus ;
+                      :hasName "Private Intercity AC Bus Colombo-Kandy" .
+
+
+###  http://www.example.com/digitalnomad#InternetSpeed_Fast
+:InternetSpeed_Fast rdf:type owl:NamedIndividual ,
+                             :InternetSpeed ;
+                    :hasInternetSpeedValue 50 .
+
+
+###  http://www.example.com/digitalnomad#InternetSpeed_Moderate
+:InternetSpeed_Moderate rdf:type owl:NamedIndividual ,
+                                 :InternetSpeed ;
+                        :hasInternetSpeedValue 20 .
+
+
+###  http://www.example.com/digitalnomad#InternetSpeed_Slow
+:InternetSpeed_Slow rdf:type owl:NamedIndividual ,
+                             :SlowInternet ;
+                    :hasInternetSpeedValue 5 .
+
+
+###  http://www.example.com/digitalnomad#LocalLaw_SriLanka
 :LocalLaw_SriLanka rdf:type owl:NamedIndividual ,
                             :LocalLaw ;
                    :hasName "Electronic Travel Authorization (ETA) for Tourists" .
 
-:Vaccination_Recommended_HepA_Typhoid rdf:type owl:NamedIndividual ,
-                                              :Vaccination ;
-                                     :hasName "Hepatitis A and Typhoid Recommended" .
 
-### Climate in Sri Lanka (Tropical)
-:TropicalClimate_Monsoon rdf:type owl:NamedIndividual ,
-                                  :TropicalClimate ;
-                         :hasName "Tropical Monsoon Climate" .
-
-### Time Zone Compatibility for Sri Lanka (UTC+5:30)
-:TimeZoneCompatibility_SriLanka rdf:type owl:NamedIndividual ,
-                                        :TimeZoneCompatibility ;
-                               :hasTimeZoneDifference 5 .
-
-### Preferences
-:ClimatePreference_Tropical rdf:type owl:NamedIndividual ,
-                                    :ClimatePreference ;
-                           :hasName "Prefers Tropical Climate" .
-
-:Budget_Medium rdf:type owl:NamedIndividual ,
-                        :Budget ;
-               :hasCostValue 1500 .
-
-:WorkHours_9to5 rdf:type owl:NamedIndividual ,
-                         :WorkHours ;
-                :hasWorkHour "9 AM - 5 PM" .
-
-### Internet Speeds
-:InternetSpeed_Fast rdf:type owl:NamedIndividual ,
-                            :InternetSpeed ;
-                   :hasInternetSpeedValue 50 .
-
-:InternetSpeed_Moderate rdf:type owl:NamedIndividual ,
-                                :InternetSpeed ;
-                       :hasInternetSpeedValue 20 .
-
-:InternetSpeed_Slow rdf:type owl:NamedIndividual ,
-                            :SlowInternet ;
-                   :hasInternetSpeedValue 5 .
-
-
-### Emergency Services in Sri Lankan Cities
-:EmergencyService_119 rdf:type owl:NamedIndividual ,
-                              :EmergencyService ;
-                     :hasName "119 Police Emergency" .
-
-### Cost of Living Instances for Sri Lankan Cities
-:MediumCost_Colombo rdf:type owl:NamedIndividual ,
-                            :MediumCost ;
-                   :hasCostValue 1500 .
-
-:LowCost_Kandy rdf:type owl:NamedIndividual ,
-                       :LowCost ;
-              :hasCostValue 1000 .
-
+###  http://www.example.com/digitalnomad#LowCost_Galle
 :LowCost_Galle rdf:type owl:NamedIndividual ,
-                       :LowCost ;
-              :hasCostValue 1200 .
-
-:VeryLowCost_Jaffna rdf:type owl:NamedIndividual ,
-                            :VeryLowCost ;
-                   :hasCostValue 900 .
+                        :LowCost ;
+               :hasCostValue 1200 .
 
 
-### Coworking Spaces in Sri Lanka
-:CoworkingSpace_Hatch rdf:type owl:NamedIndividual ,
-                             :CoworkingSpace ;
-                    :offersInternetSpeed :InternetSpeed_Fast ;
-                    :hasName "Hatch Colombo" .
+###  http://www.example.com/digitalnomad#LowCost_Kandy
+:LowCost_Kandy rdf:type owl:NamedIndividual ,
+                        :LowCost ;
+               :hasCostValue 1000 .
 
-:CoworkingSpace_ColomboCoop rdf:type owl:NamedIndividual ,
-                                    :CoworkingSpace ;
-                           :offersInternetSpeed :InternetSpeed_Moderate ;
-                           :hasName "Colombo Cooperative" .
 
-### Travel Options within Sri Lanka
+###  http://www.example.com/digitalnomad#MediumCost_Colombo
+:MediumCost_Colombo rdf:type owl:NamedIndividual ,
+                             :MediumCost ;
+                    :hasCostValue 1500 .
+
+
+###  http://www.example.com/digitalnomad#TimeZoneCompatibility_SriLanka
+:TimeZoneCompatibility_SriLanka rdf:type owl:NamedIndividual ,
+                                         :TimeZoneCompatibility ;
+                                :hasTimeZoneDifference 5 .
+
+
+###  http://www.example.com/digitalnomad#Train_Colombo
 :Train_Colombo rdf:type owl:NamedIndividual ,
                         :Train ;
                :hasName "Colombo Fort Railway Station" .
 
-:IntercityBus_Colombo rdf:type owl:NamedIndividual ,
-                              :IntercityBus ;
-                     :hasName "Private Intercity AC Bus Colombo-Kandy" .
 
-:DomesticFlight_SriLanka rdf:type owl:NamedIndividual ,
-                                 :DomesticFlight ;
-                        :hasName "Domestic Flight: Colombo to Jaffna" .
+###  http://www.example.com/digitalnomad#TropicalClimate_Monsoon
+:TropicalClimate_Monsoon rdf:type owl:NamedIndividual ,
+                                  :TropicalClimate ;
+                         :hasName "Tropical Monsoon Climate" .
 
 
-### Cities in Sri Lanka
-# Colombo - Capital and Tech Hub
-:City_Colombo rdf:type owl:NamedIndividual ,
-                       :CapitalCity ,
-                       :TechHubCity ;
-              :hasClimate :TropicalClimate_Monsoon ;
-              :hasCostOfLiving :MediumCost_Colombo ;
-              :hasCoworkingSpace :CoworkingSpace_Hatch ,
-                                :CoworkingSpace_ColomboCoop ;
-              :hasEmergencyService :EmergencyService_119 ;
-              :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
-              :hasTravelOption :Train_Colombo , :IntercityBus_Colombo , :DomesticFlight_SriLanka ;
-              :locatedIn :Country_SriLanka ;
-              :hasName "Colombo" .
-
-# Kandy - Tourist city
-:City_Kandy rdf:type owl:NamedIndividual ,
-                     :TouristCity ;
-            :hasClimate :TropicalClimate_Monsoon ;
-            :hasCostOfLiving :LowCost_Kandy ;
-            :hasEmergencyService :EmergencyService_119 ;
-            :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
-            :hasTravelOption :Train_Colombo , :IntercityBus_Colombo ;
-            :locatedIn :Country_SriLanka ;
-            :hasName "Kandy" .
-
-# Galle - Tourist city
-:City_Galle rdf:type owl:NamedIndividual ,
-                     :TouristCity ;
-            :hasClimate :TropicalClimate_Monsoon ;
-            :hasCostOfLiving :LowCost_Galle ;
-            :hasEmergencyService :EmergencyService_119 ;
-            :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
-            :hasTravelOption :Train_Colombo , :IntercityBus_Colombo ;
-            :locatedIn :Country_SriLanka ;
-            :hasName "Galle" .
-
-# Jaffna - Rural city
-:City_Jaffna rdf:type owl:NamedIndividual ,
-                      :RuralCity ;
-             :hasClimate :TropicalClimate_Monsoon ;
-             :hasCostOfLiving :VeryLowCost_Jaffna ;
-             :hasEmergencyService :EmergencyService_119 ;
-             :hasTimeZoneCompatibility :TimeZoneCompatibility_SriLanka ;
-             :hasTravelOption :Train_Colombo , :DomesticFlight_SriLanka ;
-             :locatedIn :Country_SriLanka ;
-             :hasName "Jaffna" .
+###  http://www.example.com/digitalnomad#Vaccination_Recommended_HepA_Typhoid
+:Vaccination_Recommended_HepA_Typhoid rdf:type owl:NamedIndividual ,
+                                               :Vaccination ;
+                                      :hasName "Hepatitis A and Typhoid Recommended" .
 
 
-### Additional Preferences and Requirements
-:ClimatePreference_Tropical rdf:type owl:NamedIndividual ,
-                                    :ClimatePreference ;
-                           :hasName "Prefers Tropical Climate" .
+###  http://www.example.com/digitalnomad#VeryLowCost_Jaffna
+:VeryLowCost_Jaffna rdf:type owl:NamedIndividual ,
+                             :VeryLowCost ;
+                    :hasCostValue 900 .
 
-### Example WorkRequirement (TimeZone)
-:TimeZoneCompatibility_SriLanka rdf:type owl:NamedIndividual ,
-                                        :TimeZoneCompatibility ;
-                               :hasTimeZoneDifference 5 .
 
-### Example Budget Preference
-:Budget_Medium rdf:type owl:NamedIndividual ,
-                        :Budget ;
-               :hasCostValue 1500 .
-
-### Example WorkHours
+###  http://www.example.com/digitalnomad#WorkHours_9to5
 :WorkHours_9to5 rdf:type owl:NamedIndividual ,
                          :WorkHours ;
                 :hasWorkHour "9 AM - 5 PM" .
 
 
-# End of Ontology
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
