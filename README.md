@@ -14,6 +14,21 @@ example .streamlit
 ```
    GROQ_API_KEY = "YOUR GROQ KEY" 
 ```
+
+Install Dependancies 
+
+```
+    python -m venv env
+```
+
+```
+    source env/bin/activate
+```
+
+```
+    pip install -r requirements.txt
+```
+
 ## Competancy Questions
 
 Question: Which accommodations are located in the city of Galle, along with their cost per night and rating?
