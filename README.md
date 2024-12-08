@@ -1,3 +1,21 @@
+# Nomad LK
+
+Digital Nomad Lifestyle Management Ontology with Reasoning Capabilities Leveraging Large Language Models.
+Developed as part of the Semantic Web and Ontological Engineering course, M.Sc. in Artificial Intelligence, University of Moratuwa.
+
+## Architecture
+
+![alt text](image.png)
+
+## Run Demo
+
+example .streamlit
+
+```
+   GROQ_API_KEY = "YOUR GROQ KEY" 
+```
+## Competancy Questions
+
 Question: Which accommodations are located in the city of Galle, along with their cost per night and rating?
 
 PREFIX : <http://www.example.com/digitalnomad#>
